@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+
+
+<h1 class="title" id="project-title">Other Projects</h1>
+
+<div class="card-columns">
+    {% for project in projects %}
+        <div class="card mb-4">
+            
+                {% if project.image.url is not null %}
+                    <img class="card-img-top" style="max-height: 18rem;"src="{{project.image.url}}">
+                {% else %}
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title title"> {{ project.title }} </h5>
+                    <p class="card-text description"> {{ project.description }} </p>
+        
+                <p class="card-text">
+                    <small class="text-muted"> 
+                        {% for category in project.categories.all %}
+                            <a href="{% url 'exercise_category' category.name %}">
+                                {{ category.name }}
+                            </a>&nbsp;
+                        {% endfor %}
+                    </small>
+                </p>
+                <div class="buttons">
+
+                    <a href="{% url 'exercise_detail' project.pk %}" class="btn btn-outline-info">
+                     Read More <i class="fa fa-plus fa-lg" ></i>
+                    </a>
+                    
+                    {% if project.source %}
+                        <a href="{{ project.source }}" class="btn btn-outline-info">
+                            Code <i class="fa fa-code fa-lg" ></i>
+                       </a>
+                    {% else %}
+                    {% endif %}
+                    {% if project.demo %}
+                        <a href="{{ project.demo }}" class="btn btn-outline-info">
+                            Demo <i class="fa fa-link fa-lg" ></i>
+                        </a> 
+                    {% else %}
+                    {% endif %}
+
+                </div>
+
+                
+                
+                </div>
+        </div>
+    {% endfor %}
+</div>
+
+<hr>
+<br>
+
+{% endblock %}

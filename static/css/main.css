@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300&display=swap');
+
+
+* {
+    color:#3F3F44;
+}
+
+.btn {
+    font-size: 0.8rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #79B4B7;
+    border-color: #79B4B7;
+}
+
+.circle {
+    border-radius: 50%;
+    padding: 0.2rem;
+    background: #fff;
+    border: 0.5px solid #000;
+    color: #000;
+    text-align: center;
+  }
+
+html {
+    scroll-behavior: smooth;
+   
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.content {
+    margin: 3rem 0;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+nav {
+    color: #1c202a;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 2.6;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+li.nav-item i {
+    font-size: 1.7em;
+}
+
+li {
+    padding: 0.3em 0.8em;
+}
+
+.intro-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro img.round {
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+.intro .about {
+    padding: 1.5rem 0 1.5rem;
+    font-size: 1.3em;
+}
+
+.skills li {
+    display: inline;
+    margin: 0 1em;
+}
+
+h1.title {
+    padding: 1em 0;
+}
+
+div.skill-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.card-body {
+    background-color: #F7F6F2;
+}
+
+.card-body .title {
+    font-size: 1.9em;
+}
+
+.card-body .description {
+    font-size: 1.2em;
+}
+
+small {
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:0;
+}
+
+.other {
+    margin: 2rem 0;
+}
+
+/* .other .btn-primary {
+    color: #fff;
+    background-color: #79B4B7;
+    border-color: #79B4B7;
+} */
+
+.contacts {
+    font-size: 1.2em;
+}
+
+.buttons {
+    margin: 2rem 0rem;
+}
+
+
+.post {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    letter-spacing: 0.02em;
+}
+
+.replacement{
+    min-height: 70vh;
+}
+
+.badge {
+    background-color: #388186;
+    color: #EDF2F6;
+    font-weight: 600;
+    font-size: 1em;
+    margin-right: 0.5em;
+    padding: 0.5em 0.7em;
+    border-radius: 0.8em;
+}
+
+.article {
+    padding: 1em 0;
+}

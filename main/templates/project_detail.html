@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ project.title }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        {% if project.image.url is not None %}
+            <img src="{{project.image.url}}" alt="" width="100%">
+        {% else %}
+            <h2>  
+                No Image
+            </h2>
+        {% endif %}
+    </div>
+    <div class="col-md-4">
+        <h5>About the project:</h5>
+        <p>{{ project.description }}</p>
+        <br>
+        
+        <h5>Categories:</h5>&nbsp;
+            {% for category in project.categories.all %}
+            
+                <a href="{% url 'project_category' category.name %}" class="btn badge">
+                    {{ category.name }}
+                </a>&nbsp;
+            {% endfor %}
+        <br>
+
+        <div class="buttons">
+            {% if project.source %}
+                <a href="{{ project.source }}" target="_blank" class="btn btn-outline-info">
+                    Code <i class="fa fa-code fa-lg" ></i>
+                </a>
+            {% else %}
+            {% endif %}
+            {% if project.demo %}
+                <a href="{{ project.demo }}" target="_blank" class="btn btn-outline-info">
+                    Demo <i class="fa fa-link fa-lg" ></i>
+                </a> 
+            {% else %}
+            {% endif %}
+        </div>
+
+
+        
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-12 post">
+        <p>{{ project.body | linebreaks }}</p>
+    </div>
+</div>
+{% endblock %}
