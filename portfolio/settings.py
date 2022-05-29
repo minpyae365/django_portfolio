@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-6z@5g0(_y%lg5z^j*)3x)&lb$hq2dpf!gxy3&6qztjuh_oz-kt'
+SECRET_KEY = os.environ.get('DJ_PORT_SK')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['stevemps.herokuapp.com/']
 
 
 # Application definition
@@ -126,7 +126,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 #STATIC_ROOT = 'staticfiles'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 STATICFILES_DIRS = [
