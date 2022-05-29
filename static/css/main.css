@@ -135,6 +135,7 @@ small {
 
 .post {
     font-size: 1.1em;
+    font-weight: bold;
     line-height: 1.7em;
     letter-spacing: 0.02em;
 }
