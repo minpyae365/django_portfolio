@@ -33,13 +33,13 @@
                     </a>
                     
                     {% if project.source %}
-                        <a href="{{ project.source }}" class="btn btn-outline-info">
+                        <a href="{{ project.source }}" target="_blank" class="btn btn-outline-info">
                             Code <i class="fa fa-code fa-lg" ></i>
                        </a>
                     {% else %}
                     {% endif %}
                     {% if project.demo %}
-                        <a href="{{ project.demo }}" class="btn btn-outline-info">
+                        <a href="{{ project.demo }}" target="_blank" class="btn btn-outline-info">
                             Demo <i class="fa fa-link fa-lg" ></i>
                         </a> 
                     {% else %}

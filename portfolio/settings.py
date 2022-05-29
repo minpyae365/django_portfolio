@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJ_PORT_SK')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stevemps.herokuapp.com/']
+ALLOWED_HOSTS = ['stevemps.herokuapp.com/','localhost', '127.0.0.1']
 
 
 # Application definition
