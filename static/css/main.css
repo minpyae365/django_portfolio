@@ -157,3 +157,7 @@ small {
 .article {
     padding: 1em 0;
 }
+
+.contacts {
+    font-weight: bold;
+}

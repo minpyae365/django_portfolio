@@ -91,7 +91,7 @@
     <h1 class="title" id="contacts">Contacts</h1>
 
     {% for contact in contacts %}
-        <p> {{ contact.name }} : <a href="{{ contact.link }}" target="_blank">
+        <p class="contacts"> {{ contact.name }} : <a href="{{ contact.link }}" target="_blank">
             {{ contact.link }}</a>
         </p>
     {% endfor %}
